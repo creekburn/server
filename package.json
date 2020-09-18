@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Specification driven server",
+  "main": "index.js",
+  "scripts": {
+    "test": "lerna run test",
+    "lerna": "lerna",
+    "install": "lerna exec -- npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creekburn/server.git"
+  },
+  "author": "Adam Kaplan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creekburn/server/issues"
+  },
+  "homepage": "https://github.com/creekburn/server#readme",
+  "devDependencies": {
+    "lerna": "3.22.1"
+  }
+}
