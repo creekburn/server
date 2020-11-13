@@ -2,7 +2,7 @@
   "name": "@cb/application-environment-express-http",
   "version": "0.0.1",
   "description": "Spec driven application environment using an express server to handle http requests.",
-  "author": "Adam Kaplan <7332764+Adam-Kaplan@users.noreply.github.com>",
+  "author": "Adam Kaplan",
   "homepage": "https://github.com/creekburn/server/tree/master/packages/application-environment-express-http#readme",
   "license": "MIT",
   "main": "lib/spec-middleware.js",
@@ -21,18 +21,24 @@
     "url": "git+https://github.com/creekburn/server.git"
   },
   "scripts": {
-    "test": "mocha --recursive --file ./__tests__/setup.js ./__tests__",
-    "start": "node watch/express.js",
+    "test": "jest --coverage",
     "watch": "nodemon watch/express.js"
   },
   "bugs": {
     "url": "https://github.com/creekburn/server/issues"
   },
   "devDependencies": {
-    "chai": "4.2.0",
-    "chai-as-promised": "7.1.1",
+    "@apidevtools/json-schema-ref-parser": "9.0.6",
+    "ajv": "6.12.6",
+    "eslint": "7.12.1",
     "express": "4.17.1",
-    "mocha": "8.1.3",
+    "jest": "26.6.1",
+    "mime-matcher": "1.0.5",
+    "node-fetch": "2.6.1",
     "nodemon": "2.0.4"
+  },
+  "dependencies": {
+    "lodash": "4.17.20",
+    "openapi-backend": "3.5.4"
   }
 }

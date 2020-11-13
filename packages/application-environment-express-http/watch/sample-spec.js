@@ -22,7 +22,7 @@ module.exports = {
   },
   servers: [{
     url: 'http://example.org', // REQUIRED
-    description: 'Sample Org Server',
+    description: 'Sample Org Server'
     // variables: [
     //   {
     //     enum: [''],
@@ -36,7 +36,7 @@ module.exports = {
       $ref: '#/other/path-item-object',
       summary: 'API operations.',
       description: 'API operations.',
-      'get': {
+      get: {
         tags: ['tag'],
         summary: 'API GET',
         description: 'Sample api GET',
@@ -50,9 +50,9 @@ module.exports = {
         ],
         requestBody: { $ref: '#/components/requestBodies/name' },
         responses: {
-          '4XX': { $ref: '#/components/responses/name'},
-          '5XX': { $ref: '#/components/responses/name'},
-          'default': { $ref: '#/components/responses/name' }
+          '4XX': { $ref: '#/components/responses/name' },
+          '5XX': { $ref: '#/components/responses/name' },
+          default: { $ref: '#/components/responses/name' }
         },
         callbacks: {
           'callback-unique-name': { $ref: '#/components/callbacks/name' }
@@ -77,13 +77,13 @@ module.exports = {
         }
       ]
     }
-  }, 
+  },
   components: {
     schemas: {
-      'name': {} // JSON schema Object + extensions
+      name: {} // JSON schema Object + extensions
     },
     responses: {
-      'name': {
+      name: {
         description: 'Name response.',
         headers: {
           'custom-header': { $ref: '#/components/headers/name' }
@@ -102,7 +102,7 @@ module.exports = {
       }
     },
     parameters: {
-      'name': {
+      name: {
         name: '', // REQUIRED
         in: '', // REQUIRED, [path, query, header, cookie]
         description: '',
@@ -130,7 +130,7 @@ module.exports = {
       }
     },
     examples: {
-      'name': {
+      name: {
         summary: 'Example Name',
         description: 'Example Name',
         value: '', // literal as long as it can be placed in json/yaml,
@@ -138,7 +138,7 @@ module.exports = {
       }
     },
     requestBodies: {
-      'name': {
+      name: {
         description: 'Sample Request Body',
         content: { // REQUIRED
           'media-type': {
@@ -160,9 +160,9 @@ module.exports = {
       }
     },
     headers: {
-      'name': {
+      name: {
         description: '',
-        required: false, // if (in===path) must be true
+        required: false,
         deprecated: false,
         allowEmptyValue: false,
         // must be supported by where in==header
@@ -183,7 +183,7 @@ module.exports = {
       }
     },
     securitySchemes: {
-      'name': {
+      name: {
         type: '', // REQUIRED, ["apiKey", "http", "oauth2", "openIdConnect"]
         description: 'Sample Security Schemes.',
         // type == apiKey
@@ -198,21 +198,21 @@ module.exports = {
             authorizationUrl: '', // REQUIRED
             refreshUrl: '',
             scopes: { // REQUIRED
-              'scope': 'scope description'
+              scope: 'scope description'
             }
           },
           password: {
             tokenUrl: '', // REQUIRED
             refreshUrl: '',
             scopes: { // REQUIRED
-              'scope': 'scope description'
+              scope: 'scope description'
             }
           },
           clientCredentials: {
             tokenUrl: '', // REQUIRED
             refreshUrl: '',
             scopes: { // REQUIRED
-              'scope': 'scope description'
+              scope: 'scope description'
             }
           },
           authorizationCode: {
@@ -220,7 +220,7 @@ module.exports = {
             tokenUrl: '', // REQUIRED
             refreshUrl: '',
             scopes: { // REQUIRED
-              'scope': 'scope description'
+              scope: 'scope description'
             }
           }
         },
@@ -229,11 +229,11 @@ module.exports = {
       }
     },
     links: {
-      'name': {
+      name: {
         operationRef: '', // external to document, exlusive with operationId
-        operationId: '',  // relative to document, exlusive with operationRef
+        operationId: '', // relative to document, exlusive with operationRef
         parameters: {
-          'name': 'constant or expression'
+          name: 'constant or expression'
         },
         requestBody: 'constant or expression',
         description: 'Sample link.',
@@ -251,7 +251,7 @@ module.exports = {
       }
     },
     callbacks: {
-      'name': {
+      name: {
         '{expression}': { /* Path Item Object */ }
       }
     }
@@ -273,4 +273,4 @@ module.exports = {
     description: 'Sample external documentation.',
     url: 'http://example.org' // REQUIRED
   }
-};
+}
