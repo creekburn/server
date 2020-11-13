@@ -28,7 +28,7 @@
     "url": "https://github.com/creekburn/server/issues"
   },
   "devDependencies": {
-    "@apidevtools/json-schema-ref-parser": "9.0.6",
+    "@apidevtools/swagger-parser": "10.0.2",
     "ajv": "6.12.6",
     "eslint": "7.12.1",
     "express": "4.17.1",

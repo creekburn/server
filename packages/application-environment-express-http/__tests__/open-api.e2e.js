@@ -2,8 +2,7 @@ const express = require('express')
 const app = express()
 const _ = require('lodash')
 const fetch = require('node-fetch')
-// TODO : replace with https://apitools.dev/swagger-parser/
-const $RefParser = require('@apidevtools/json-schema-ref-parser')
+const SwaggerParser = require('@apidevtools/swagger-parser')
 const MimeMatcher = require('mime-matcher').default
 const Ajv = require('ajv')
 const ajv = new Ajv()
@@ -19,7 +18,7 @@ let deref
 describe('express E2E', () => {
   beforeAll(() => {
     return Promise.all([
-      $RefParser.dereference(spec).then((d) => {
+      SwaggerParser.dereference(spec).then((d) => {
         deref = d
       }),
       new Promise((resolve, reject) => {
@@ -56,7 +55,7 @@ describe('express E2E', () => {
     // TODO : account for parameters
       const response = await fetch(`http://localhost:${port}${path}`, { method })
 
-      expect(response.ok).toBeTrue()
+      expect(response.ok).toBe(true)
 
       const contentType = response.headers.get('content-type')
 
@@ -76,7 +75,7 @@ describe('express E2E', () => {
       if (!valid) {
         console.log(validator.errors)
       }
-      expect(valid).toBeTrue()
+      expect(valid).toBe(true)
     })
   })
 })
