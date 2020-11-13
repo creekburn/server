@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creekburn/server.git"
+    "url": "git@github.com:creekburn/server.git"
   },
   "scripts": {
     "test": "jest --coverage",
