@@ -1,6 +1,6 @@
 {
   "name": "@cb/application-environment-express-http",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Spec driven application environment using an express server to handle http requests.",
   "author": "Adam Kaplan",
   "homepage": "https://github.com/creekburn/server/tree/master/packages/application-environment-express-http#readme",
