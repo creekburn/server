@@ -1,4 +1,4 @@
-# server
+# Creek Burn - Server #
 Specification driven server
 
 ## Development Setup ##
@@ -19,13 +19,21 @@ script alias can be used for any Lerna command.
 npm run lerna -- [lerna commands]
 ```
 
-### Tests ###
-Tests are package specific so they have to be run via a Lerna command.
+## Tests ##
+Tests are run by [Jest](https://jestjs.io/docs/en/getting-started.html).
+This project will use the [package.json](https://jestjs.io/docs/en/configuration) for Jest configuration.
+Customize the run with [Jest CLI Options](https://jestjs.io/docs/en/cli) passed to the `npm test` command.
 
 ```
-npm run lerna -- run test
-```
+# Run all tests
+npm test
 
-Tests are setup to use the mocha configuration from this root project.
-Each package has it's own test script to specify the location of its
-test files.
+# Run unit tests only
+npm test -- --selectProjects unit
+
+# Run e2e tests only
+npm test -- --selectProjects e2e
+
+# Run all tests for single project
+npm test -- --runTestsByPath packages/{project folder}
+```

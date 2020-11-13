@@ -1,11 +1,22 @@
-# `@cb/application-environment-express-http`
+# `@cb/application-environment-express-http` #
 
-> TODO: description
+Express middleware to implement a server that responds to requests 
+defined in an OpenAPI specification.
 
-## Usage
+## Usage ## 
+Please see [test server](./watch/express.js) for usage example.
+
+## Development ##
+Start the watch command to start an [express server](http://localhost:3000).
 
 ```
-const applicationEnvironmentExpressHttp = require('@cb/application-environment-express-http');
-
-// TODO: DEMONSTRATE API
+npm run watch
 ```
+
+### Tests ###
+Run test for this project using [Jest](https://jestjs.io/docs/en/getting-started.html).
+
+```
+npm test
+```
+

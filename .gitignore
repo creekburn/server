@@ -104,3 +104,6 @@ dist
 .tern-port
 
 *.sublime-workspace
+
+# doc generation directory
+out/

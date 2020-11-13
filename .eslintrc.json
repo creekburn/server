@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "standard",
+        "plugin:jest/all",
+        "plugin:jest-formatting/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "jest/no-hooks": "warn"
+    },
+    "plugins": [
+        "jest",
+        "jest-formatting"
+    ]
+}
